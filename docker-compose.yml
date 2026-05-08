@@ -1,0 +1,9 @@
+services:
+  app:
+    image: php:8.4-cli
+    working_dir: /app
+    volumes:
+      - .:/app:Z
+    ports:
+      - "8000:8000"
+    command: php artisan serve --host=0.0.0.0
